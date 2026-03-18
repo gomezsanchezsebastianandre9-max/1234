@@ -118,7 +118,7 @@
         .service-card:hover { border-color: var(--accent); transform: translateY(-10px); }
         .service-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
         .service-card h4 { margin-bottom: 15px; color: var(--primary); }
-        .service-card ul { list-style: none; font-size: 0.9rem; color: var(--text-muted); }
+        .service-card p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* --- MARCAS --- */
         .brands { padding: 80px 8%; text-align: center; }
@@ -147,7 +147,7 @@
         .form-card { background: var(--white); padding: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 0; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 0; font-family: 'Montserrat', sans-serif; }
 
         footer { background: var(--dark); color: white; padding: 80px 8% 20px; text-align: center; }
         .wa-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
@@ -270,39 +270,44 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
                     <strong>Ubicación:</strong><br>
-                    Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima.
+                    Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima. [cite: 9]
                 </div>
             </div>
             <div class="contact-item">
                 <i class="fas fa-phone-alt"></i>
                 <div>
                     <strong>Teléfonos:</strong><br>
-                    974 584 564 / 949 392 573
+                    974 584 564 / 949 392 573 [cite: 10]
                 </div>
             </div>
             <div class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <div>
                     <strong>Email:</strong><br>
-                    ventas.hidrosem@gmail.com
+                    ventas.hidrosem@gmail.com 
                 </div>
             </div>
         </div>
 
         <div class="form-card">
-            <form action="#">
+            <form action="https://formsubmit.co/ventas.hidrosem@gmail.com" method="POST">
                 <div class="form-group">
                     <label>Nombre Completo / Empresa</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" name="Nombre_Empresa" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Correo Electrónico</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" name="Email_Cliente" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>¿En qué podemos ayudarle?</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                    <textarea name="Mensaje" class="form-control" rows="4" required></textarea>
                 </div>
+
+                <input type="hidden" name="_subject" value="Nueva Solicitud Web - HIDROSEM">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
                 <button type="submit" class="btn btn-accent" style="width:100%; border:none; cursor:pointer;">Enviar Solicitud</button>
             </form>
         </div>
@@ -310,7 +315,7 @@
 
     <footer>
         <h2 style="color: white; margin-bottom: 20px;">HIDROSEM <span>INGENIEROS</span></h2>
-        <p style="opacity: 0.7; font-weight: 300;">Lima, 2026. Ingeniería al Servicio de tu Empresa.</p>
+        <p style="opacity: 0.7; font-weight: 300;">Lima, 2026. Ingeniería al Servicio de tu Empresa. [cite: 17]</p>
         <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">
             &copy; 2026 HIDROSEM Ingenieros S.A.C. Todos los derechos reservados.
         </div>
