@@ -11,7 +11,7 @@
     <style>
         :root {
             --brand-blue: #003a7a;    /* Azul Industrial Profundo [cite: 1] */
-            --brand-orange: #f29100;  /* Naranja de Seguridad  */
+            --brand-orange: #f29100;  /* Naranja de Seguridad [cite: 3] */
             --bg-dark: #0a0f1a;
             --bg-light: #f8fafc;
             --white: #ffffff;
@@ -23,7 +23,7 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); background: var(--white); overflow-x: hidden; line-height: 1.6; }
         html { scroll-behavior: smooth; }
 
-        /* --- Header High-End --- */
+        /* --- Nav de Alto Nivel --- */
         header {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: saturate(180%) blur(20px);
@@ -60,7 +60,7 @@
         /* Fondo Animado de Partículas (Simula flujo de agua purificada) */
         .hero-bg-anim { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(circle at center, rgba(242,145,0,0.1) 0%, transparent 70%); }
 
-        /* --- Stats: Operación de Campo --- */
+        /* --- Stats Operativas [cite: 6] --- */
         .stats-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
@@ -81,7 +81,7 @@
         .section-tag { color: var(--brand-orange); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; display: block; margin-bottom: 20px; text-align: center; }
         .section-title { font-family: 'Space Grotesk'; font-size: 3.5rem; text-align: center; color: var(--brand-blue); margin-bottom: 100px; letter-spacing: -2px; }
 
-        /* --- Grid de Servicios Pro --- */
+        /* --- Portafolio de Soluciones Integrales [cite: 4, 6] --- */
         .services-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; }
         .service-item { 
             padding: 60px; 
@@ -96,15 +96,15 @@
         .service-item:hover * { color: var(--white) !important; }
         .service-number { font-family: 'Space Grotesk'; font-size: 4rem; opacity: 0.1; margin-bottom: -30px; }
         .service-item i { font-size: 2.5rem; color: var(--brand-orange); margin-bottom: 30px; }
-        .service-item h4 { font-family: 'Space Grotesk'; font-size: 1.5rem; margin-bottom: 20px; }
+        .service-item h4 { font-family: 'Space Grotesk'; font-size: 1.5rem; margin-bottom: 20px; text-transform: uppercase; }
         .service-item p { font-size: 0.95rem; opacity: 0.8; }
 
-        /* --- INGENIERÍA VISUAL (SIN IMÁGENES) --- */
+        /* --- Ingeniería Visual (Blueprint Mode) --- */
         .tech-showcase { background: var(--bg-dark); color: var(--white); }
         .blueprint-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; }
         .blueprint-card { height: 400px; border: 1px solid rgba(255,255,255,0.1); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         
-        /* Animación: Molecular Flow (Ósmosis) */
+        /* Animación: Molecular Flow (Ósmosis [cite: 6, 50]) */
         .molecule { position: absolute; width: 8px; height: 8px; background: var(--brand-orange); border-radius: 50%; filter: blur(2px); animation: drift 4s infinite linear; }
         @keyframes drift { 
             0% { transform: translateY(200px) translateX(-50px); opacity: 0; } 
@@ -112,16 +112,16 @@
             100% { transform: translateY(-200px) translateX(50px); opacity: 0; } 
         }
 
-        /* Animación: Pressure Pulse (Calderos) */
+        /* Animación: Pressure Pulse (Calderos [cite: 6, 25]) */
         .pulse-ring { position: absolute; width: 100px; height: 100px; border: 2px solid var(--brand-orange); border-radius: 50%; animation: sonar 2s infinite; }
         @keyframes sonar { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
 
-        /* --- Alianzas & Clientes --- */
+        /* --- Alianzas & Clientes Estratégicos [cite: 30, 42] --- */
         .logotypes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 50px; }
-        .logo-badge { padding: 15px 30px; background: var(--white); border: 1px solid #e2e8f0; font-weight: 700; font-size: 0.85rem; color: #64748b; letter-spacing: 1px; transition: 0.3s; }
+        .logo-badge { padding: 15px 30px; background: var(--white); border: 1px solid #e2e8f0; font-weight: 700; font-size: 0.85rem; color: #64748b; letter-spacing: 1px; transition: 0.3s; text-transform: uppercase; }
         .logo-badge:hover { border-color: var(--brand-orange); color: var(--brand-blue); }
 
-        /* --- Contacto de Negocios --- */
+        /* --- Contacto Corporativo [cite: 8, 10, 11] --- */
         .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
         .contact-form { background: var(--bg-light); padding: 80px; }
         .input-group { margin-bottom: 30px; }
@@ -166,88 +166,86 @@
     <section class="hero" id="inicio">
         <div class="hero-bg-anim"></div>
         <div class="hero-content">
-            <h1>RESULTADOS SEGUROS.</h1>
-            <p>HIDROSEM Ingenieros S.A.C. es el aliado estratégico líder en el tratamiento de agua industrial y mantenimiento técnico especializado para sectores productivos de alta exigencia[cite: 3, 4, 7].</p>
+            <h1>RESULTADOS SEGUROS [cite: 3]</h1>
+            <p>HIDROSEM Ingenieros S.A.C. es el aliado estratégico líder en el tratamiento de agua industrial y mantenimiento técnico especializado para sectores productivos[cite: 4, 7].</p>
         </div>
     </section>
 
     <div class="stats-grid">
-        <div class="stat-card"><h3>+10</h3><p>Años de Experiencia [cite: 17]</p></div>
-        <div class="stat-card"><h3>100%</h3><p>Seguridad Operativa </p></div>
-        <div class="stat-card"><h3>24/7</h3><p>Soporte Crítico </p></div>
-        <div class="stat-card"><h3>PERÚ</h3><p>Alcance Nacional [cite: 4]</p></div>
+        <div class="stat-card"><h3>+10</h3><p>Trayectoria Técnica [cite: 6]</p></div>
+        <div class="stat-card"><h3>100%</h3><p>Seguridad Operativa [cite: 6]</p></div>
+        <div class="stat-card"><h3>24/7</h3><p>Soporte Crítico [cite: 6]</p></div>
+        <div class="stat-card"><h3>PERÚ</h3><p>Sede Principal - Lima [cite: 4, 17]</p></div>
     </div>
 
     <section id="servicios">
-        <span class="section-tag">Portafolio de Capacidades [cite: 19]</span>
-        <h2 class="section-title">Ingeniería al Servicio de tu Empresa </h2>
+        <span class="section-tag">Portafolio de Capacidades</span>
+        <h2 class="section-title">Ingeniería al Servicio de tu Empresa [cite: 15]</h2>
         <div class="services-container">
             <div class="service-item">
                 <div class="service-number">01</div>
                 <i class="fas fa-industry"></i>
-                <h4>Tratamiento Hídrico Industrial</h4>
-                <p>Soluciones integrales diseñadas para la optimización de procesos y el uso responsable de recursos[cite: 20, 21].</p>
+                <h4>Tratamiento Hídrico Industrial [cite: 20]</h4>
+                <p>Optimización integral de procesos para el uso responsable de recursos hídricos en el sector productivo[cite: 7].</p>
             </div>
             <div class="service-item">
                 <div class="service-number">02</div>
                 <i class="fas fa-flask-vial"></i>
-                <h4>Suministro Químico de Precisión</h4>
-                <p>Comercialización de reactivos para análisis y productos específicos para calderos[cite: 22, 24, 44, 45].</p>
+                <h4>Suministro Químico de Precisión [cite: 22, 24]</h4>
+                <p>Comercialización especializada de reactivos y productos químicos para calderos y análisis de agua[cite: 24, 44].</p>
             </div>
             <div class="service-item">
                 <div class="service-number">03</div>
                 <i class="fas fa-tools"></i>
-                <h4>Mantenimiento de Sistemas Críticos</h4>
-                <p>Servicio preventivo y correctivo para calderos, ablandadores automáticos y filtros[cite: 24, 25, 47, 48].</p>
+                <h4>Mantenimiento de Sistemas Críticos [cite: 24, 25]</h4>
+                <p>Intervención técnica garantizada en calderos, ablandadores automáticos, filtros y sistemas dosificadores[cite: 25].</p>
             </div>
             <div class="service-item">
                 <div class="service-number">04</div>
                 <i class="fas fa-drafting-compass"></i>
-                <h4>Diseño e Instalación Especializada</h4>
-                <p>Ingeniería de ablandadores, dosificadores y equipos de ósmosis inversa[cite: 26, 48, 50].</p>
+                <h4>Diseño e Instalación Especializada [cite: 26, 48]</h4>
+                <p>Arquitectura técnica de ablandadores, equipos hidroneumáticos y sistemas de ósmosis inversa[cite: 26, 50].</p>
             </div>
             <div class="service-item">
                 <div class="service-number">05</div>
                 <i class="fas fa-trash-restore"></i>
-                <h4>Gestión de Saneamiento Industrial</h4>
-                <p>Servicio certificado de limpieza y succión de trampas de grasa y pozos sépticos[cite: 51, 52].</p>
+                <h4>Saneamiento Industrial [cite: 51, 52]</h4>
+                <p>Gestión certificada de limpieza y succión de trampas de grasa y pozos sépticos[cite: 52].</p>
             </div>
             <div class="service-item">
                 <div class="service-number">06</div>
                 <i class="fas fa-cogs"></i>
-                <h4>Venta de Materiales y Repuestos</h4>
-                <p>Suministro global de repuestos originales para sistemas de tratamiento en general[cite: 53].</p>
+                <h4>Suministro de Componentes [cite: 53]</h4>
+                <p>Provisión global de materiales y repuestos originales para la continuidad operativa de sus sistemas[cite: 53].</p>
             </div>
         </div>
     </section>
 
     <section class="tech-showcase" id="ingenieria">
-        <span class="section-tag">Ecosistema Tecnológico </span>
-        <h2 class="section-title" style="color:var(--white)">Infraestructura de Purificación</h2>
+        <span class="section-tag">Ecosistema Tecnológico [cite: 6]</span>
+        <h2 class="section-title" style="color:var(--white)">Arquitectura de Purificación [cite: 50]</h2>
         <div class="blueprint-grid">
             <div class="blueprint-card">
                 <div class="molecule" style="animation-delay: 0s"></div>
-                <div class="molecule" style="animation-delay: 1s"></div>
-                <div class="molecule" style="animation-delay: 2s"></div>
-                <h4 style="position:relative; z-index:5">Flujo Molecular / Ósmosis Inversa </h4>
+                <div class="molecule" style="animation-delay: 1.5s"></div>
+                <h4 style="position:relative; z-index:5">Ósmosis Inversa [cite: 50]</h4>
             </div>
             <div class="blueprint-card">
                 <div class="pulse-ring" style="animation-delay: 0s"></div>
-                <div class="pulse-ring" style="animation-delay: 0.5s"></div>
-                <h4 style="position:relative; z-index:5">Sistemas de Presión / Calderos [cite: 25]</h4>
+                <h4 style="position:relative; z-index:5">Sistemas de Presión [cite: 25, 26]</h4>
             </div>
             <div class="blueprint-card">
-                <div style="width: 2px; height: 100px; background: var(--brand-orange); animation: flow 2s infinite"></div>
-                <h4 style="margin-top: 20px;">Dosificación Química [cite: 26]</h4>
+                <div style="width: 2px; height: 100px; background: var(--brand-orange); animation: fadeIn 2s infinite"></div>
+                <h4 style="margin-top: 20px;">Sistemas Dosificadores [cite: 26]</h4>
             </div>
         </div>
     </section>
 
     <section id="alianzas">
-        <span class="section-tag">Red de Valor [cite: 30, 42]</span>
-        <h2 class="section-title">Aliados Estratégicos & Clientes [cite: 7, 30]</h2>
+        <span class="section-tag">Red de Valor Global</span>
+        <h2 class="section-title">Partners & Clientes Corporativos</h2>
         <div style="margin-bottom: 80px;">
-            <p style="text-align:center; font-weight: 800; margin-bottom: 30px;">PROVEEDORES LÍDERES [cite: 30]</p>
+            <p style="text-align:center; font-weight: 800; margin-bottom: 30px; letter-spacing: 2px;">PROVEEDORES ESTRATÉGICOS [cite: 30]</p>
             <div class="logotypes-grid">
                 <div class="logo-badge">HYDRONIX [cite: 31]</div>
                 <div class="logo-badge">PENTAIR WATER [cite: 34]</div>
@@ -261,12 +259,12 @@
             </div>
         </div>
         <div>
-            <p style="text-align:center; font-weight: 800; margin-bottom: 30px;">CARTERA INSTITUCIONAL [cite: 42]</p>
+            <p style="text-align:center; font-weight: 800; margin-bottom: 30px; letter-spacing: 2px;">CARTERA INSTITUCIONAL [cite: 42]</p>
             <div class="logotypes-grid">
                 <div class="logo-badge">VSI INDUSTRIAL [cite: 56]</div>
                 <div class="logo-badge">ALUSUD [cite: 56]</div>
                 <div class="logo-badge">FILTROS PUROLATOR [cite: 55]</div>
-                <div class="logo-badge">CENTRO INTERNACIONAL DE LA PAPA (CIP) [cite: 59]</div>
+                <div class="logo-badge">CIP (INTERNATIONAL POTATO CENTER) [cite: 59]</div>
                 <div class="logo-badge">CLOSURE SYSTEMS INTERNATIONAL [cite: 58]</div>
                 <div class="logo-badge">SILPET [cite: 60]</div>
             </div>
@@ -276,15 +274,15 @@
     <section id="contacto">
         <div class="contact-section">
             <div class="info-pane">
-                <h2 style="font-size: 4rem; margin-bottom: 40px; letter-spacing: -3px;">CONSOLIDEMOS TU PROYECTO.</h2>
-                <p style="margin-bottom: 50px;">Garantizamos eficiencia operativa y confiabilidad técnica en cada etapa del tratamiento hídrico.</p>
+                <h2 style="font-size: 4rem; margin-bottom: 40px; letter-spacing: -3px;">CONSOLIDEMOS SU PROYECTO[cite: 7].</h2>
+                <p style="margin-bottom: 50px;">Garantizamos eficiencia operativa y confiabilidad técnica en cada etapa del tratamiento hídrico industrial[cite: 6, 7].</p>
                 
                 <div style="margin-bottom: 30px;">
-                    <p style="color:var(--brand-orange); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">UBICACIÓN [cite: 9]</p>
-                    <p>Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima [cite: 9]</p>
+                    <p style="color:var(--brand-orange); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">UBICACIÓN SEDE CENTRAL </p>
+                    <p>Mz. I Lote 07 Asoc. Prop. San Gabriel, SJL - Lima </p>
                 </div>
                 <div style="margin-bottom: 30px;">
-                    <p style="color:var(--brand-orange); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">LÍNEAS DIRECTAS [cite: 10]</p>
+                    <p style="color:var(--brand-orange); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">LÍNEAS DE ENLACE DIRECTO [cite: 10]</p>
                     <p>974584564 / 949392573 / 942331094 [cite: 10]</p>
                 </div>
                 <div>
@@ -294,28 +292,28 @@
             </div>
             <form class="contact-form" action="mailto:ventas.hidrosem@gmail.com" method="post" enctype="text/plain">
                 <div class="input-group">
-                    <label>Nombre Completo o Razón Social</label>
-                    <input type="text" name="Nombre" required>
+                    <label>Razón Social / Organización</label>
+                    <input type="text" name="Organizacion" required>
                 </div>
                 <div class="input-group">
-                    <label>Unidad de Negocio / Servicio de Interés</label>
-                    <input type="text" name="Interes" placeholder="Ej: Mantenimiento de Calderos" required>
+                    <label>Ecosistema de Interés</label>
+                    <input type="text" name="Interes" placeholder="Ej: Optimización de Calderos" required>
                 </div>
                 <div class="input-group">
-                    <label>Detalles del Requerimiento Técnico</label>
+                    <label>Requerimiento Técnico Detallado</label>
                     <textarea name="Mensaje" rows="6" required></textarea>
                 </div>
-                <button type="submit" class="btn-send">Iniciar Consultoría Especializada</button>
+                <button type="submit" class="btn-send">Iniciar Consultoría Técnica [cite: 11]</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <div class="footer-logo">HIDROSEM <span>S.A.C.</span></div>
+        <div class="footer-logo">HIDROSEM <span>S.A.C. [cite: 2]</span></div>
         <p>Resultados Seguros | Ingeniería al Servicio de tu Empresa [cite: 3, 15]</p>
         <div class="footer-info">
             &copy; 2026 HIDROSEM Ingenieros S.A.C. Lima, Perú[cite: 17]. 
-            Comprometidos con el uso responsable de los recursos hídricos[cite: 7].
+            Comprometidos con la optimización de procesos industriales y el uso responsable de recursos hídricos[cite: 7].
         </div>
     </footer>
 
