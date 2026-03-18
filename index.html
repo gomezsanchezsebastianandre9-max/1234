@@ -82,7 +82,7 @@
         .btn-accent { background: var(--accent); color: var(--white); }
         .btn-accent:hover { background: var(--white); color: var(--accent); transform: translateY(-3px); }
 
-        /* --- INFO SECCIÓN (BROCHURE) --- */
+        /* --- INFO SECCIÓN --- */
         .about-brief {
             padding: 80px 8%;
             display: grid;
@@ -150,7 +150,27 @@
         .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 0; font-family: 'Montserrat', sans-serif; }
 
         footer { background: var(--dark); color: white; padding: 80px 8% 20px; text-align: center; }
-        .wa-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        /* Botón WhatsApp Flotante Actualizado */
+        .wa-btn { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background: #25d366; 
+            color: white; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2rem; 
+            text-decoration: none; 
+            z-index: 1000; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            transition: var(--transition);
+        }
+        .wa-btn:hover { transform: scale(1.1); }
 
         @media (max-width: 992px) {
             .about-brief, .contact { grid-template-columns: 1fr; }
@@ -160,7 +180,9 @@
 </head>
 <body>
 
-    <a href="https://wa.me/51974584564" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/51993619115" class="wa-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header>
         <a href="#" class="logo">HIDROSEM <span>INGENIEROS</span></a>
@@ -185,7 +207,7 @@
     <section class="about-brief" id="nosotros">
         <div class="about-text">
             <h2>Resultados Seguros</h2>
-            <p><strong>HIDROSEM Ingenieros S.A.C.</strong> es una empresa peruana especializada en brindar soluciones integrales en tratamiento de agua industrial y mantenimiento de equipos para diferentes sectores productivos.</p>
+            <p><strong>HIDROSEM Ingenieros S.A.C.</strong> es una empresa peruana especializada en brindar soluciones integrales en tratamiento de agua industrial y mantenimiento de equipos.</p>
             <p>Contamos con personal técnico altamente capacitado para garantizar eficiencia, seguridad y confiabilidad en cada proyecto.</p>
             <div class="highlight-box">
                 "Trabajamos con el compromiso de brindar soluciones eficientes que optimicen los procesos industriales y contribuyan al uso responsable de los recursos hídricos."
@@ -202,112 +224,36 @@
             <p>Contamos con amplia experiencia en el diseño, instalación y mantenimiento técnico.</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-water"></i>
-                <h4>01. Tratamiento de Agua</h4>
-                <p>Soluciones industriales para procesos productivos y optimización de recursos hídricos.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-vial"></i>
-                <h4>02. Productos Químicos</h4>
-                <p>Comercialización de químicos especializados para calderos y sistemas de vapor.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-tools"></i>
-                <h4>03. Mantenimiento</h4>
-                <p>Servicio técnico para calderos, ablandadores automáticos, filtros y dosificadores.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-project-diagram"></i>
-                <h4>04. Diseño e Instalación</h4>
-                <p>Implementación de equipos hidroneumáticos, filtros y sistemas de dosificación.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-microchip"></i>
-                <h4>05. Ósmosis Inversa</h4>
-                <p>Diseño, instalación y mantenimiento especializado de equipos de purificación por ósmosis.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-flask"></i>
-                <h4>06. Reactivos Químicos</h4>
-                <p>Suministro de reactivos certificados para el análisis preciso de la calidad del agua.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-trash-restore"></i>
-                <h4>07. Saneamiento</h4>
-                <p>Limpieza y succión técnica de trampas de grasa y pozos sépticos industriales.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-cog"></i>
-                <h4>08. Repuestos</h4>
-                <p>Venta de materiales y repuestos originales para sistemas de tratamiento.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="brands">
-        <h3>Marcas y Proveedores Aliados</h3>
-        <div class="brand-container">
-            <span class="brand-tag">HYDRONIX</span> <span class="brand-tag">PENTAIR WATER</span>
-            <span class="brand-tag">MAR COR</span> <span class="brand-tag">AQUAFINE</span>
-            <span class="brand-tag">CANATURE</span> <span class="brand-tag">HANNA INSTRUMENTS</span>
-            <span class="brand-tag">LAKOS</span> <span class="brand-tag">VIQUA</span>
-            <span class="brand-tag">WATTS</span> <span class="brand-tag">SEKO</span>
-        </div>
-        
-        <h3 style="margin-top: 60px;">Clientes que Confían en Nosotros</h3>
-        <div class="brand-container">
-            <span class="brand-tag">VSI INDUSTRIAL</span> <span class="brand-tag">ALUSUD</span>
-            <span class="brand-tag">PUROLATOR</span> <span class="brand-tag">CIP - POTATO CENTER</span>
-            <span class="brand-tag">SILPET</span> <span class="brand-tag">MA SAC</span>
+            <div class="service-card"><i class="fas fa-water"></i><h4>01. Tratamiento de Agua</h4><p>Soluciones industriales para procesos productivos y optimización de recursos hídricos.</p></div>
+            <div class="service-card"><i class="fas fa-vial"></i><h4>02. Productos Químicos</h4><p>Comercialización de químicos especializados para calderos y sistemas de vapor.</p></div>
+            <div class="service-card"><i class="fas fa-tools"></i><h4>03. Mantenimiento</h4><p>Servicio técnico para calderos, ablandadores automáticos, filtros y dosificadores.</p></div>
+            <div class="service-card"><i class="fas fa-project-diagram"></i><h4>04. Diseño e Instalación</h4><p>Implementación de equipos hidroneumáticos, filtros y sistemas de dosificación.</p></div>
         </div>
     </section>
 
     <section class="contact" id="contacto">
         <div class="contact-details">
             <h3>Hablemos de su Proyecto</h3>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                    <strong>Ubicación:</strong><br>
-                    Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima. [cite: 9]
-                </div>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <strong>Teléfonos:</strong><br>
-                    974 584 564 / 949 392 573 [cite: 10]
-                </div>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <strong>Email:</strong><br>
-                    ventas.hidrosem@gmail.com 
-                </div>
-            </div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong>Ubicación:</strong><br>Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima.</div></div>
+            <div class="contact-item"><i class="fas fa-phone-alt"></i><div><strong>Teléfonos:</strong><br>993 619 115 / 974 584 564</div></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><div><strong>Email:</strong><br>ventas.hidrosem@gmail.com</div></div>
         </div>
 
         <div class="form-card">
             <form action="https://formsubmit.co/ventas.hidrosem@gmail.com" method="POST">
                 <div class="form-group">
                     <label>Nombre Completo / Empresa</label>
-                    <input type="text" name="Nombre_Empresa" class="form-control" required>
+                    <input type="text" name="Nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>Correo Electrónico</label>
-                    <input type="email" name="Email_Cliente" class="form-control" required>
+                    <input type="email" name="Email" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label>¿En qué podemos ayudarle?</label>
                     <textarea name="Mensaje" class="form-control" rows="4" required></textarea>
                 </div>
-
-                <input type="hidden" name="_subject" value="Nueva Solicitud Web - HIDROSEM">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-
                 <button type="submit" class="btn btn-accent" style="width:100%; border:none; cursor:pointer;">Enviar Solicitud</button>
             </form>
         </div>
@@ -315,10 +261,7 @@
 
     <footer>
         <h2 style="color: white; margin-bottom: 20px;">HIDROSEM <span>INGENIEROS</span></h2>
-        <p style="opacity: 0.7; font-weight: 300;">Lima, 2026. Ingeniería al Servicio de tu Empresa. [cite: 17]</p>
-        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">
-            &copy; 2026 HIDROSEM Ingenieros S.A.C. Todos los derechos reservados.
-        </div>
+        <p style="opacity: 0.7; font-weight: 300;">Lima, 2026. Ingeniería al Servicio de tu Empresa.</p>
     </footer>
 
 </body>
