@@ -11,7 +11,7 @@
     <style>
         /* --- CORE CORPORATIVO --- */
         :root {
-            --primary: #003a7a;     /* Azul Corporativo [cite: 1] */
+            --primary: #003a7a;     /* Azul Corporativo */
             --accent: #f29100;      /* Naranja Industrial */
             --dark: #121212;
             --light: #f4f7f6;
@@ -68,7 +68,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(135deg, rgba(0,58,122,0.95) 0%, rgba(0,20,50,0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070') center/cover no-repeat fixed;
+                        url('https://images.unsplash.com/photo-1517646281694-22d4f24da035?q=80&w=2070') center/cover no-repeat fixed;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -78,9 +78,10 @@
         }
 
         .hero-content { max-width: 800px; animation: fadeInUp 1s ease; }
-        .hero-content h1 { font-size: 5rem; line-height: 1.05; margin-bottom: 30px; font-weight: 600; color: var(--white); }
+        .hero-content h1 { font-size: 5rem; line-height: 1.05; margin-bottom: 30px; font-weight: 600; color: var(--white); font-family: 'Oswald', sans-serif;}
         .hero-content p { font-size: 1.4rem; margin-bottom: 50px; opacity: 0.95; font-weight: 300; color: var(--white); max-width: 650px;}
 
+        /* Botones */
         .btn {
             padding: 20px 50px;
             border-radius: 4px;
@@ -110,6 +111,7 @@
         /* --- SECCIONES GENERALES --- */
         section { padding: 140px 8%; }
         .section-header { text-align: center; margin-bottom: 100px; max-width: 800px; margin-left: auto; margin-right: auto;}
+        .section-header p { color: var(--text-muted); font-size: 1.2rem; font-weight: 300;}
         .bg-light { background-color: var(--light); }
 
         /* --- SERVICIOS --- */
@@ -119,7 +121,7 @@
         .card:hover { transform: translateY(-15px); box-shadow: var(--shadow); }
         .card:hover::before { transform: scaleX(1); }
         .card i { font-size: 3.5rem; color: var(--accent); margin-bottom: 35px; }
-        .card h4 { font-size: 1.3rem; margin-bottom: 25px; color: var(--primary); font-family: 'Oswald', sans-serif; text-transform: uppercase;}
+        .card h4 { font-size: 1.5rem; margin-bottom: 25px; color: var(--primary); font-family: 'Oswald', sans-serif; text-transform: uppercase;}
         .card p { font-size: 1rem; color: var(--text-main); flex-grow: 1; margin-bottom: 0;}
 
         /* --- PROVEEDORES Y CLIENTES --- */
@@ -136,43 +138,49 @@
         .info-text strong { display: block; color: var(--primary); font-size: 1.2rem; margin-bottom: 5px;}
         .info-text p { margin-bottom: 0; color: var(--text-muted); font-size: 1rem;}
 
+        /* Formulario Profesional */
         .contact-form { background: var(--white); padding: 70px; border-radius: 4px; box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,0.02);}
         .form-header { margin-bottom: 50px;}
         .form-group { margin-bottom: 30px; }
-        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px;}
+        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px;}
         .form-control { width: 100%; padding: 20px; border: 2px solid #eee; border-radius: 2px; font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: var(--transition); background-color: var(--light);}
         .form-control:focus { border-color: var(--primary); outline: none; background-color: var(--white);}
         textarea.form-control { resize: none; height: 180px; }
 
         /* --- WHATSAPP & FOOTER --- */
         .wa-float { position: fixed; bottom: 40px; right: 40px; width: 75px; height: 75px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; z-index: 3000; box-shadow: 0 15px 40px rgba(37,211,102,0.6); transition: var(--transition); text-decoration: none;}
-        .wa-float:hover { transform: scale(1.1) rotate(10deg); }
+        .wa-float:hover { transform: scale(1.1) rotate(10deg); background-color: #1ebd5a; }
 
         footer { background: var(--dark); color: var(--white); padding: 120px 8% 50px; text-align: center; }
         .footer-logo { font-size: 2.8rem; color: var(--white); font-family: 'Oswald', sans-serif; text-transform: uppercase; margin-bottom: 30px; text-decoration: none; display: inline-block; font-weight: 600;}
         .footer-logo span { color: var(--accent); }
-        .footer-bottom { border-top: 1px solid #333; margin-top: 90px; padding-top: 50px; font-size: 0.95rem; opacity: 0.7; letter-spacing: 1px;}
+        .footer-bottom { border-top: 1px solid #333; margin-top: 90px; padding-top: 50px; font-size: 0.95rem; opacity: 0.7; letter-spacing: 1px; font-weight: 300;}
 
+        /* --- ANIMACIONES --- */
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 1200px) {
-            .hero-content h1 { font-size: 3.5rem; }
+            .hero-content h1 { font-size: 3.2rem; }
             .trust-bar { flex-direction: column; gap: 30px; margin-top: -60px;}
-            .contact-layout { grid-template-columns: 1fr; }
+            .trust-item { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 30px;}
+            .contact-layout { grid-template-columns: 1fr; gap: 80px;}
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/51974584564" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/51974584564" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header>
         <a href="#inicio" class="logo">HIDROSEM <span>INGENIEROS</span></a>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Empresa</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#partners">Proveedores</a></li>
+                <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -181,111 +189,106 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Ingeniería al Servicio de tu Empresa</h1>
-            <p>Empresa peruana especializada en brindar soluciones integrales en tratamiento de agua industrial y mantenimiento de equipos[cite: 4].</p>
+            <p>Especialistas en tratamiento de agua industrial, mantenimiento de sistemas y suministro químico para sectores productivos[cite: 4].</p>
             <div class="hero-btns">
-                <a href="#contacto" class="btn btn-accent">Enviar Solicitud</a>
-                <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+                <a href="#contacto" class="btn btn-accent">Solicitar Solución</a>
+                <a href="#servicios" class="btn btn-outline">Nuestros Servicios</a>
             </div>
         </div>
     </section>
 
-    <div class="trust-bar" id="nosotros">
+    <div class="trust-bar">
         <div class="trust-item">
             <i class="fas fa-certificate"></i>
             <h3>Calidad</h3>
-            <p>Garantizada [cite: 5]</p>
+            <p>Garantizada [cite: 5, 6]</p>
         </div>
         <div class="trust-item">
-            <i class="fas fa-user-shield"></i>
-            <h3>Eficiencia</h3>
+            <i class="fas fa-users-cog"></i>
+            <h3>Personal</h3>
+            <p>Altamente Capacitado [cite: 6]</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Seguridad</h3>
             <p>Y Confiabilidad [cite: 6]</p>
         </div>
         <div class="trust-item">
-            <i class="fas fa-hand-holding-water"></i>
-            <h3>Uso Responsable</h3>
-            <p>De Recursos Hídricos [cite: 7]</p>
+            <i class="fas fa-leaf"></i>
+            <h3>Hídricos</h3>
+            <p>Uso Responsable [cite: 7]</p>
         </div>
     </div>
 
     <section id="servicios">
         <div class="section-header">
-            <h2>Nuestra Especialidad [cite: 3]</h2>
-            <p>Personal técnico altamente capacitado con amplia experiencia en diseño e instalación[cite: 6].</p>
+            <h2>Nuestra Especialidad</h2>
+            <p>Soluciones eficientes que optimizan procesos industriales y contribuyen al uso responsable del agua[cite: 7].</p>
         </div>
         <div class="services-grid">
             <div class="card">
                 <i class="fas fa-industry"></i>
-                <h4>01. Tratamiento de Agua [cite: 20]</h4>
-                <p>Soluciones industriales para diversos sectores productivos[cite: 21].</p>
+                <h4>01. Tratamiento de Agua Industriales</h4>
+                <p>Ingeniería especializada para optimizar recursos en diversos sectores[cite: 20, 21].</p>
             </div>
             <div class="card">
                 <i class="fas fa-flask"></i>
-                <h4>02. Productos Químicos [cite: 22]</h4>
-                <p>Suministro especializado para el mantenimiento de calderos[cite: 24].</p>
+                <h4>02. Productos Químicos</h4>
+                <p>Comercialización de reactivos y químicos especializados para calderos[cite: 22, 24].</p>
             </div>
             <div class="card">
                 <i class="fas fa-tools"></i>
-                <h4>03. Mantenimiento Técnico [cite: 24]</h4>
-                <p>Calderos, ablandadores automáticos, filtros y dosificadores[cite: 25].</p>
+                <h4>03. Mantenimiento Integral</h4>
+                <p>Técnico experto en calderos, ablandadores, filtros y dosificadores[cite: 24, 25].</p>
             </div>
             <div class="card">
-                <i class="fas fa-project-diagram"></i>
-                <h4>04. Diseño e Instalación [cite: 26]</h4>
-                <p>Implementación de equipos hidroneumáticos y filtros especializados[cite: 26].</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-vial"></i>
-                <h4>06. Reactivos Químicos [cite: 44]</h4>
-                <p>Suministro para análisis técnico de calidad de agua[cite: 45].</p>
+                <i class="fas fa-drafting-compass"></i>
+                <h4>04. Diseño e Instalación</h4>
+                <p>Implementación de equipos hidroneumáticos, filtros y sistemas de ablandamiento[cite: 26].</p>
             </div>
             <div class="card">
                 <i class="fas fa-water"></i>
-                <h4>07. Equipos de Ósmosis [cite: 50]</h4>
-                <p>Diseño y mantenimiento especializado de sistemas de ósmosis[cite: 48].</p>
+                <h4>07. Equipos de Ósmosis</h4>
+                <p>Mantenimiento y diseño profesional de sistemas de purificación inversa[cite: 47, 48, 50].</p>
             </div>
             <div class="card">
-                <i class="fas fa-biohazard"></i>
-                <h4>08. Saneamiento [cite: 51]</h4>
-                <p>Limpieza de trampas de grasa y pozos sépticos[cite: 52].</p>
+                <i class="fas fa-vial"></i>
+                <h4>06. Análisis de Agua</h4>
+                <p>Suministro de reactivos químicos certificados para control de calidad[cite: 44, 45].</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-recycle"></i>
+                <h4>08. Saneamiento Industrial</h4>
+                <p>Limpieza y succión técnica de trampa de grasa y pozos sépticos[cite: 51, 52].</p>
             </div>
             <div class="card">
                 <i class="fas fa-cog"></i>
-                <h4>09. Repuestos [cite: 53]</h4>
-                <p>Venta de materiales y repuestos industriales en general[cite: 53].</p>
+                <h4>09. Repuestos en General</h4>
+                <p>Venta de materiales y repuestos para todos los sistemas hídricos[cite: 53].</p>
             </div>
         </div>
     </section>
 
     <div class="brand-section">
-        <h3>Principales Proveedores [cite: 30]</h3>
+        <h3>Principales Proveedores</h3>
         <div class="brand-grid">
-            <span class="brand-pill">HYDRONIX [cite: 31]</span>
-            <span class="brand-pill">STAMFORD SCIENTIFIC [cite: 32]</span>
-            <span class="brand-pill">MAR COR PURIFICATION [cite: 33]</span>
-            <span class="brand-pill">PENTAIR WATER [cite: 34]</span>
-            <span class="brand-pill">AQUAFINE [cite: 35]</span>
-            <span class="brand-pill">FLINT & WALLING [cite: 36]</span>
-            <span class="brand-pill">FLUID-O-TECH [cite: 37]</span>
-            <span class="brand-pill">CANATURE [cite: 39]</span>
-            <span class="brand-pill">HANNA INSTRUMENTS [cite: 40]</span>
-            <span class="brand-pill">OZOTECH [cite: 40]</span>
-            <span class="brand-pill">WATTS [cite: 40]</span>
-            <span class="brand-pill">LAKOS [cite: 41]</span>
-            <span class="brand-pill">SEKO [cite: 41]</span>
-            <span class="brand-pill">VIQUA [cite: 41]</span>
+            <span class="brand-pill">HYDRONIX</span> <span class="brand-pill">STAMFORD SCIENTIFIC</span>
+            <span class="brand-pill">MAR COR PURIFICATION</span> <span class="brand-pill">PENTAIR WATER</span>
+            <span class="brand-pill">AQUAFINE</span> <span class="brand-pill">FLINT & WALLING</span>
+            <span class="brand-pill">CANATURE</span> <span class="brand-pill">HANNA INSTRUMENTS</span>
+            <span class="brand-pill">OZOTECH</span> <span class="brand-pill">WATTS</span>
+            <span class="brand-pill">LAKOS</span> <span class="brand-pill">SEKO</span> <span class="brand-pill">VIQUA</span>
         </div>
     </div>
 
     <div class="brand-section bg-light">
-        <h3>Principales Clientes [cite: 42]</h3>
+        <h3>Nuestros Clientes</h3>
         <div class="brand-grid">
-            <span class="brand-pill">VSI INDUSTRIAL [cite: 56]</span>
-            <span class="brand-pill">ALUSUD [cite: 56]</span>
-            <span class="brand-pill">FILTROS PUROLATOR [cite: 55]</span>
-            <span class="brand-pill">CLOSURE SYSTEMS INTERNATIONAL [cite: 58]</span>
-            <span class="brand-pill">INTERNATIONAL POTATO CENTER (CIP) [cite: 59]</span>
-            <span class="brand-pill">SILPET [cite: 60]</span>
-            <span class="brand-pill">MA SAC [cite: 49]</span>
+            <span class="brand-pill">VSI INDUSTRIAL</span> <span class="brand-pill">ALUSUD</span>
+            <span class="brand-pill">FILTROS PUROLATOR</span> <span class="brand-pill">MA SAC</span>
+            <span class="brand-pill">CLOSURE SYSTEMS INTERNATIONAL</span>
+            <span class="brand-pill">INTERNATIONAL POTATO CENTER (CIP)</span>
+            <span class="brand-pill">SILPET</span>
         </div>
     </div>
 
@@ -299,47 +302,48 @@
                 </div>
                 <div class="info-item">
                     <div class="info-icon"><i class="fas fa-phone"></i></div>
-                    <div class="info-text"><strong>Teléfonos</strong><p>974584564 / 949392573 / 942331094 </p></div>
+                    <div class="info-text"><strong>Líneas Directas</strong><p>974 584 564 / 949 392 573 [cite: 10]</p></div>
                 </div>
                 <div class="info-item">
                     <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="info-text"><strong>Email</strong><p>ventas.hidrosem@gmail.com </p></div>
+                    <div class="info-text"><strong>Emails de Venta</strong><p>ventas.hidrosem@gmail.com [cite: 11]</p></div>
                 </div>
             </div>
 
             <form class="contact-form" action="https://formsubmit.co/ventas.hidrosem@gmail.com" method="POST">
                 <div class="form-header">
-                    <h2>Resultados Seguros [cite: 3]</h2>
-                    <p style="color:var(--text-muted);">Aliado estratégico para tu empresa[cite: 7, 16].</p>
+                    <h2>Enviar Solicitud</h2>
+                    <p style="color:var(--text-muted);">Resultados Seguros e Ingeniería de confianza[cite: 3].</p>
                 </div>
                 
                 <div class="form-group">
                     <label>NOMBRE COMPLETO / EMPRESA</label>
-                    <input type="text" name="Empresa_Nombre" class="form-control" placeholder="Ej: VSI Industrial S.A.C." required>
+                    <input type="text" name="Nombre" class="form-control" placeholder="Ej: VSI Industrial S.A.C." required>
                 </div>
                 
                 <div class="form-group">
                     <label>CORREO ELECTRÓNICO</label>
-                    <input type="email" name="Email_Cliente" class="form-control" placeholder="nombre@correo.com" required>
+                    <input type="email" name="Email" class="form-control" placeholder="usuario@empresa.com" required>
                 </div>
                 
                 <div class="form-group">
                     <label>¿EN QUÉ PODEMOS AYUDARLE?</label>
-                    <textarea name="Consulta" class="form-control" placeholder="Describa su requerimiento técnico..." required></textarea>
+                    <textarea name="Mensaje" class="form-control" placeholder="Describa su requerimiento técnico..." required></textarea>
                 </div>
 
                 <input type="hidden" name="_subject" value="Nueva Solicitud Web - HIDROSEM">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://tuweb.com/gracias.html"> <button type="submit" class="btn btn-accent" style="width: 100%;">ENVIAR SOLICITUD</button>
+
+                <button type="submit" class="btn btn-accent" style="width: 100%;">ENVIAR SOLICITUD</button>
             </form>
         </div>
     </section>
 
     <footer>
         <a href="#inicio" class="footer-logo">HIDROSEM <span>INGENIEROS</span></a>
-        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">Ingeniería al servicio de tu empresa. Optimizamos procesos y contribuimos al uso responsable del agua[cite: 7, 15].</p>
+        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto; color: white;">HIDROSEM Ingenieros S.A.C. - Una empresa peruana especializada en soluciones integrales[cite: 4, 15].</p>
         <div class="footer-bottom">
-            &copy; 2026 HIDROSEM Ingenieros S.A.C. - Lima, Perú [cite: 17]
+            &copy; 2026 HIDROSEM Ingenieros S.A.C. Todos los derechos reservados. Lima, Perú[cite: 17].
         </div>
     </footer>
 
