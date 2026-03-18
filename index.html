@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDROSEM Ingenieros S.A.C. | Soluciones en Tratamiento de Agua</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --azul-oscuro: #004a99;
+            --azul-claro: #007bff;
+            --naranja: #f39200;
+            --blanco: #ffffff;
+            --gris-claro: #f4f4f4;
+            --texto: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--texto);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--naranja);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--naranja);
+            color: var(--blanco);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Secciones */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--azul-oscuro);
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--naranja);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Servicios Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--gris-claro);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--azul-oscuro);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            background: var(--blanco);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--naranja);
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .contact-item {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--azul-oscuro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            nav { display: none; } /* Simplificación para móvil */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>HIDROSEM <span style="color: var(--naranja);">INGENIEROS</span></h1>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>RESULTADOS SEGUROS</h2>
+        <p>Ingeniería al servicio de tu empresa. Especialistas en tratamiento de agua industrial, mantenimiento y suministros químicos.</p>
+        <a href="#contacto" class="btn">Solicitar Asesoría</a>
+    </section>
+
+    <section id="nosotros">
+        <div class="section-title">
+            <h2>Sobre Nosotros</h2>
+        </div>
+        <p style="text-align: center; max-width: 900px; margin: 0 auto;">
+            Empresa peruana especializada en brindar soluciones integrales en tratamiento de agua industrial, mantenimiento de equipos y suministro de productos químicos para diferentes sectores productivos. Contamos con personal técnico altamente capacitado garantizando eficiencia, seguridad y confiabilidad.
+        </p>
+    </section>
+
+    <section id="servicios" style="background-color: var(--blanco);">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-faucet"></i>
+                <h3>Tratamiento de Agua</h3>
+                <p>Soluciones industriales personalizadas para optimizar tus procesos.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-flask"></i>
+                <h3>Productos Químicos</h3>
+                <p>Comercialización de productos para calderos y reactivos para análisis de agua.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Mantenimiento</h3>
+                <p>Calderos, ablandadores automáticos, filtros y dosificadores.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Diseño e Instalación</h3>
+                <p>Equipos de ósmosis inversa, sistemas hidroneumáticos y ablandadores.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-trash-alt"></i>
+                <h3>Limpieza Especializada</h3>
+                <p>Succión de trampas de grasa y pozos sépticos.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Venta de Repuestos</h3>
+                <p>Materiales y repuestos en general para sistemas de agua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" style="background-color: var(--gris-claro);">
+        <div class="section-title">
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Dirección</h3>
+                <p>Mz. I Lote 07 Asoc. de Prop. San Gabriel<br>Lima-SJL</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Teléfonos</h3>
+                <p>974584564 / 949392573 / 942331094</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Correo Electrónico</h3>
+                <p>ventas.hidrosem@gmail.com<br>asesoria.hidrosem@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HIDROSEM Ingenieros S.A.C. - Resultados Seguros. Lima, Perú.</p>
+    </footer>
+
+</body>
+</html>
