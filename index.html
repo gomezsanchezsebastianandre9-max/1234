@@ -5,31 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIDROSEM Ingenieros S.A.C. | Ingeniería al Servicio de tu Empresa</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #003a7a;     /* Azul Corporativo */
+            --primary: #003a7a;     /* Azul Corporativo Hidrosem */
             --accent: #f29100;      /* Naranja Industrial */
-            --dark: #0a1a2f;
-            --light: #f8fafc;
+            --dark-navy: #05162a;
+            --soft-gray: #f9fbff;
             --white: #ffffff;
-            --text-main: #2d3436;
-            --text-muted: #636e72;
-            --transition: all 0.3s ease-in-out;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; color: var(--text-main); line-height: 1.6; background-color: var(--white); }
+        body { font-family: 'Inter', sans-serif; color: #334155; line-height: 1.7; background-color: var(--white); overflow-x: hidden; }
         html { scroll-behavior: smooth; }
-        
-        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 
-        /* --- NAVEGACIÓN --- */
+        /* --- HEADER PROFESIONAL --- */
         header {
-            background: var(--white);
-            padding: 1rem 8%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 1.2rem 8%;
             position: fixed;
             width: 100%;
             top: 0;
@@ -37,137 +34,134 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .logo { font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; }
+        .logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--primary); text-decoration: none; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: var(--accent); }
 
-        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
         nav a {
             text-decoration: none;
-            color: var(--dark);
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: var(--transition);
+            color: var(--dark-navy);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
         }
         nav a:hover { color: var(--accent); }
 
-        /* --- HERO --- */
+        /* --- HERO SECTION --- */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0,58,122,0.85), rgba(0,20,50,0.7)), 
-                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070') center/cover;
+            height: 95vh;
+            background: linear-gradient(rgba(5, 22, 42, 0.8), rgba(5, 22, 42, 0.6)), 
+                        url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=2070') center/cover;
             display: flex;
             align-items: center;
             padding: 0 8%;
             color: var(--white);
-            margin-top: 60px;
         }
 
-        .hero-content { max-width: 800px; }
-        .hero-content h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; }
-        .hero-content p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 300; opacity: 0.9; }
+        .hero-content { max-width: 850px; }
+        .hero-content h1 { font-family: 'Oswald', sans-serif; font-size: 5rem; line-height: 1; margin-bottom: 25px; text-transform: uppercase; }
+        .hero-content p { font-size: 1.25rem; margin-bottom: 45px; font-weight: 300; opacity: 0.9; max-width: 600px; }
 
-        .btn {
-            padding: 15px 35px;
-            border-radius: 2px;
+        .btn-main {
+            background: var(--accent);
+            color: var(--white);
+            padding: 18px 45px;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .btn-accent { background: var(--accent); color: var(--white); }
-        .btn-accent:hover { background: var(--white); color: var(--accent); transform: translateY(-3px); }
-
-        /* --- INFO SECCIÓN (BROCHURE) --- */
-        .about-brief {
-            padding: 80px 8%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-text h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; }
-        .highlight-box {
-            background: var(--light);
-            border-left: 5px solid var(--accent);
-            padding: 30px;
-            font-style: italic;
-        }
-
-        /* --- SERVICIOS --- */
-        .services { padding: 100px 8%; background: var(--light); }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-header h2 { font-size: 3rem; color: var(--primary); }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .service-card {
-            background: var(--white);
-            padding: 40px;
-            border-bottom: 4px solid transparent;
-            transition: var(--transition);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-10px); }
-        .service-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
-        .service-card h4 { margin-bottom: 15px; color: var(--primary); }
-        .service-card ul { list-style: none; font-size: 0.9rem; color: var(--text-muted); }
-
-        /* --- MARCAS --- */
-        .brands { padding: 80px 8%; text-align: center; }
-        .brand-container { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 15px; 
-            margin-top: 40px; 
-        }
-        .brand-tag {
-            padding: 10px 20px;
-            background: #eee;
             border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 10px 25px rgba(242, 145, 0, 0.3);
+            transition: var(--transition-smooth);
         }
+        .btn-main:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(242, 145, 0, 0.5); }
+
+        /* --- SECCIÓN SOBRE NOSOTROS (Info Brochure) --- */
+        .brief { padding: 120px 8%; display: flex; gap: 80px; align-items: center; }
+        .brief-text { flex: 1; }
+        .brief-text h2 { font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--primary); margin-bottom: 25px; }
+        .brief-text p { margin-bottom: 20px; font-size: 1.1rem; }
+        .tagline { border-left: 4px solid var(--accent); padding-left: 25px; font-weight: 600; color: var(--dark-navy); margin: 30px 0; font-size: 1.2rem; }
+
+        /* --- GRID DE SERVICIOS (9 Servicios del Brochure) --- */
+        .services { padding: 100px 8%; background: var(--soft-gray); }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .s-card {
+            background: var(--white);
+            padding: 45px;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .s-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.06); border-color: var(--accent); }
+        .s-card i { font-size: 2.8rem; color: var(--accent); }
+        .s-card h4 { font-family: 'Oswald', sans-serif; font-size: 1.3rem; color: var(--primary); }
+        .s-card p { font-size: 0.95rem; color: #64748b; }
+
+        /* --- ESPECIALIDAD RESINAS --- */
+        .specialty { background: var(--primary); color: white; padding: 60px 8%; text-align: center; }
+        .resinas-box { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
+        .resina-item { background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 50px; font-weight: 600; letter-spacing: 1px; }
+
+        /* --- PARTNERS Y CLIENTES --- */
+        .logos-section { padding: 100px 8%; text-align: center; }
+        .logo-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 40px; }
+        .logo-pill { padding: 8px 18px; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: #475569; transition: 0.3s; }
+        .logo-pill:hover { border-color: var(--primary); color: var(--primary); background: var(--soft-gray); }
 
         /* --- CONTACTO --- */
-        .contact { padding: 100px 8%; display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
-        .contact-details h3 { font-size: 2rem; margin-bottom: 30px; color: var(--primary); }
-        .contact-item { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
-        .contact-item i { width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .contact-grid { padding: 120px 8%; display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; }
+        .c-info h2 { font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--primary); margin-bottom: 40px; }
+        .c-detail { display: flex; gap: 20px; margin-bottom: 35px; }
+        .c-icon { width: 60px; height: 60px; background: var(--soft-gray); color: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        
+        .c-form { background: var(--white); padding: 60px; border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .input-group { margin-bottom: 25px; }
+        .input-group label { display: block; font-weight: 700; margin-bottom: 10px; font-size: 0.8rem; text-transform: uppercase; color: var(--primary); }
+        .form-input { width: 100%; padding: 15px; border: 2px solid #f1f5f9; border-radius: 6px; background: #f8fafc; font-family: inherit; transition: 0.3s; }
+        .form-input:focus { outline: none; border-color: var(--accent); background: white; }
 
-        .form-card { background: var(--white); padding: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 0; }
+        footer { background: var(--dark-navy); color: white; padding: 100px 8% 40px; text-align: center; }
+        .footer-logo { font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 20px; }
+        .footer-logo span { color: var(--accent); }
+        .copy { margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; opacity: 0.6; }
 
-        footer { background: var(--dark); color: white; padding: 80px 8% 20px; text-align: center; }
-        .wa-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        /* --- WHATSAPP FLOATING --- */
+        .wa-float { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 15px 30px rgba(37,211,102,0.4); z-index: 3000; text-decoration: none; transition: 0.3s; }
+        .wa-float:hover { transform: scale(1.1); background: #1eb954; }
 
-        @media (max-width: 992px) {
-            .about-brief, .contact { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 3rem; }
+        @media (max-width: 1024px) {
+            .hero-content h1 { font-size: 3.5rem; }
+            .brief, .contact-grid { flex-direction: column; gap: 60px; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/51974584564" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/51974584564" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header>
         <a href="#" class="logo">HIDROSEM <span>INGENIEROS</span></a>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#empresa">Empresa</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -176,143 +170,158 @@
 
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Ingeniería al Servicio de tu Empresa</h1>
-            <p>Especialistas en tratamiento de agua industrial, mantenimiento de sistemas críticos y optimización de recursos hídricos con calidad garantizada.</p>
-            <a href="#contacto" class="btn btn-accent">Solicitar Asesoría Técnica</a>
+            <h1>Ingeniería de Aguas & Soluciones Industriales</h1>
+            <p>Especialistas peruanos brindando mantenimiento, diseño y suministro químico con estándares de calidad garantizada.</p>
+            <a href="#contacto" class="btn-main">Iniciar Consultoría Técnica</a>
         </div>
     </section>
 
-    <section class="about-brief" id="nosotros">
-        <div class="about-text">
+    <section class="brief" id="empresa">
+        <div class="brief-text">
             <h2>Resultados Seguros</h2>
-            <p><strong>HIDROSEM Ingenieros S.A.C.</strong> es una empresa peruana especializada en brindar soluciones integrales en tratamiento de agua industrial y mantenimiento de equipos para diferentes sectores productivos.</p>
-            <p>Contamos con personal técnico altamente capacitado para garantizar eficiencia, seguridad y confiabilidad en cada proyecto.</p>
-            <div class="highlight-box">
-                "Trabajamos con el compromiso de brindar soluciones eficientes que optimicen los procesos industriales y contribuyan al uso responsable de los recursos hídricos."
+            <p><strong>HIDROSEM Ingenieros S.A.C.</strong> es una empresa peruana líder en el sector, especializada en soluciones integrales para el tratamiento de agua industrial y mantenimiento preventivo de equipos críticos[cite: 4].</p>
+            <div class="tagline">
+                Optimización de procesos industriales y uso responsable de los recursos hídricos[cite: 7].
             </div>
+            <p>Contamos con un equipo técnico altamente capacitado para asegurar que cada proyecto de ingeniería cumpla con los más altos niveles de seguridad y confiabilidad[cite: 6].</p>
         </div>
-        <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=1000" alt="Ingeniería Industrial" style="width:100%; box-shadow: 20px 20px 0 var(--accent);">
+        <div style="flex:1;">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1000" style="width:100%; border-radius: 12px; box-shadow: 30px 30px 0 #f291001a;">
+        </div>
+    </section>
+
+    <section class="specialty">
+        <h3 style="font-family:'Oswald'; margin-bottom: 20px; font-size: 1.8rem;">SUMINISTRO DE RESINAS DE ALTA EFICIENCIA</h3>
+        <div class="resinas-box">
+            <span class="resina-item">RESINA ANIÓNICA [cite: 29]</span>
+            <span class="resina-item">RESINA CATIÓNICA [cite: 29]</span>
+            <span class="resina-item">INTERCAMBIO IÓNICO [cite: 28]</span>
         </div>
     </section>
 
     <section class="services" id="servicios">
-        <div class="section-header">
-            <h2>Nuestras Soluciones</h2>
-            <p>Contamos con amplia experiencia en el diseño, instalación y mantenimiento técnico.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-water"></i>
-                <h4>01. Tratamiento de Agua</h4>
-                <p>Soluciones industriales para procesos productivos y optimización de recursos hídricos.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-vial"></i>
-                <h4>02. Productos Químicos</h4>
-                <p>Comercialización de químicos especializados para calderos y sistemas de vapor.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-tools"></i>
-                <h4>03. Mantenimiento</h4>
-                <p>Servicio técnico para calderos, ablandadores automáticos, filtros y dosificadores.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-project-diagram"></i>
-                <h4>04. Diseño e Instalación</h4>
-                <p>Implementación de equipos hidroneumáticos, filtros y sistemas de dosificación.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-microchip"></i>
-                <h4>05. Ósmosis Inversa</h4>
-                <p>Diseño, instalación y mantenimiento especializado de equipos de purificación por ósmosis.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-flask"></i>
-                <h4>06. Reactivos Químicos</h4>
-                <p>Suministro de reactivos certificados para el análisis preciso de la calidad del agua.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-trash-restore"></i>
-                <h4>07. Saneamiento</h4>
-                <p>Limpieza y succión técnica de trampas de grasa y pozos sépticos industriales.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-cog"></i>
-                <h4>08. Repuestos</h4>
-                <p>Venta de materiales y repuestos originales para sistemas de tratamiento.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="brands">
-        <h3>Marcas y Proveedores Aliados</h3>
-        <div class="brand-container">
-            <span class="brand-tag">HYDRONIX</span> <span class="brand-tag">PENTAIR WATER</span>
-            <span class="brand-tag">MAR COR</span> <span class="brand-tag">AQUAFINE</span>
-            <span class="brand-tag">CANATURE</span> <span class="brand-tag">HANNA INSTRUMENTS</span>
-            <span class="brand-tag">LAKOS</span> <span class="brand-tag">VIQUA</span>
-            <span class="brand-tag">WATTS</span> <span class="brand-tag">SEKO</span>
+        <div style="text-align: center; margin-bottom: 80px;">
+            <h2 style="font-family:'Oswald'; font-size: 3rem; color: var(--primary);">NUESTRAS CAPACIDADES TÉCNICAS</h2>
+            <p style="color: var(--accent); font-weight: 700; letter-spacing: 2px;">SOLUCIONES DE INGENIERÍA INTEGRAL</p>
         </div>
         
-        <h3 style="margin-top: 60px;">Clientes que Confían en Nosotros</h3>
-        <div class="brand-container">
-            <span class="brand-tag">VSI INDUSTRIAL</span> <span class="brand-tag">ALUSUD</span>
-            <span class="brand-tag">PUROLATOR</span> <span class="brand-tag">CIP - POTATO CENTER</span>
-            <span class="brand-tag">SILPET</span> <span class="brand-tag">MA SAC</span>
+        <div class="grid-container">
+            <div class="s-card">
+                <i class="fas fa-industry"></i>
+                <h4>Tratamiento de Agua Industrial</h4>
+                <p>Implementación de sistemas avanzados para la optimización hídrica en procesos productivos[cite: 20, 21].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-flask-vial"></i>
+                <h4>Comercialización Química</h4>
+                <p>Suministro de productos químicos especializados para calderos y sistemas de vapor[cite: 22, 24].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-tools"></i>
+                <h4>Mantenimiento de Equipos</h4>
+                <p>Servicio técnico para calderos, ablandadores, filtros y sistemas de dosificación[cite: 24, 25].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h4>Diseño e Instalación</h4>
+                <p>Ingeniería a medida para equipos hidroneumáticos, filtros y sistemas de ablandamiento[cite: 26].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-microchip"></i>
+                <h4>Sistemas de Ósmosis</h4>
+                <p>Mantenimiento y diseño experto de equipos de ósmosis inversa para alta purificación[cite: 48, 50].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-vial-circle-check"></i>
+                <h4>Análisis de Agua</h4>
+                <p>Provisión de reactivos químicos específicos para el control de calidad y análisis técnico[cite: 44, 45].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-biohazard"></i>
+                <h4>Saneamiento Industrial</h4>
+                <p>Limpieza especializada de trampas de grasa y succión técnica de pozos sépticos[cite: 51, 52].</p>
+            </div>
+            <div class="s-card">
+                <i class="fas fa-box-open"></i>
+                <h4>Repuestos & Materiales</h4>
+                <p>Venta de componentes, materiales y repuestos originales para sistemas industriales[cite: 53].</p>
+            </div>
         </div>
     </section>
 
-    <section class="contact" id="contacto">
-        <div class="contact-details">
-            <h3>Hablemos de su Proyecto</h3>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
+    <section class="logos-section">
+        <h3 style="font-family:'Oswald'; margin-bottom: 30px;">RESPALDADOS POR MARCAS LÍDERES</h3>
+        <div class="logo-wrap">
+            <span class="logo-pill">HYDRONIX [cite: 31]</span>
+            <span class="logo-pill">STAMFORD SCIENTIFIC [cite: 32]</span>
+            <span class="logo-pill">MAR COR PURIFICATION [cite: 33]</span>
+            <span class="logo-pill">PENTAIR WATER [cite: 34]</span>
+            <span class="logo-pill">AQUAFINE [cite: 35]</span>
+            <span class="logo-pill">CANATURE [cite: 39]</span>
+            <span class="logo-pill">HANNA INSTRUMENTS [cite: 40]</span>
+            <span class="logo-pill">WATTS [cite: 40]</span>
+            <span class="logo-pill">SEKO [cite: 41]</span>
+            <span class="logo-pill">VIQUA [cite: 41]</span>
+        </div>
+
+        <h3 style="font-family:'Oswald'; margin-top: 60px; margin-bottom: 30px;">CARTERA DE CLIENTES ESTRATÉGICOS</h3>
+        <div class="logo-wrap">
+            <span class="logo-pill">VSI INDUSTRIAL [cite: 56]</span>
+            <span class="logo-pill">ALUSUD [cite: 56]</span>
+            <span class="logo-pill">FILTROS PUROLATOR [cite: 54, 55]</span>
+            <span class="logo-pill">CLOSURE SYSTEMS INTERNATIONAL [cite: 58]</span>
+            <span class="logo-pill">CIP (INTERNATIONAL POTATO CENTER) [cite: 59]</span>
+            <span class="logo-pill">SILPET [cite: 60]</span>
+        </div>
+    </section>
+
+    <section class="contact-grid" id="contacto">
+        <div class="c-info">
+            <h2>CENTRAL DE ASESORÍA</h2>
+            <div class="c-detail">
+                <div class="c-icon"><i class="fas fa-map-marked-alt"></i></div>
                 <div>
-                    <strong>Ubicación:</strong><br>
-                    Mz. I Lote 07 Asoc. San Gabriel, SJL - Lima.
+                    <strong>Dirección Administrativa</strong>
+                    <p>Mz. I Lote 07 San Gabriel, SJL - Lima, Perú [cite: 9]</p>
                 </div>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
+            <div class="c-detail">
+                <div class="c-icon"><i class="fas fa-phone-volume"></i></div>
                 <div>
-                    <strong>Teléfonos:</strong><br>
-                    974 584 564 / 949 392 573
+                    <strong>Líneas Directas de Atención</strong>
+                    <p>974 584 564 | 949 392 573 | 942 331 094 [cite: 10]</p>
                 </div>
             </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
+            <div class="c-detail">
+                <div class="c-icon"><i class="fas fa-envelope-open-text"></i></div>
                 <div>
-                    <strong>Email:</strong><br>
-                    ventas.hidrosem@gmail.com
+                    <strong>Canales Digitales</strong>
+                    <p>ventas.hidrosem@gmail.com<br>asesoria.hidrosem@gmail.com [cite: 11]</p>
                 </div>
             </div>
         </div>
 
-        <div class="form-card">
+        <div class="c-form">
+            <h3 style="margin-bottom: 30px; color: var(--primary);">SOLICITAR COTIZACIÓN</h3>
             <form action="#">
-                <div class="form-group">
-                    <label>Nombre Completo / Empresa</label>
-                    <input type="text" class="form-control" required>
+                <div class="input-group">
+                    <label>Empresa / Cliente</label>
+                    <input type="text" class="form-input" placeholder="Ej. VSI Industrial SAC">
                 </div>
-                <div class="form-group">
-                    <label>Correo Electrónico</label>
-                    <input type="email" class="form-control" required>
+                <div class="input-group">
+                    <label>Especifique su requerimiento técnico</label>
+                    <textarea class="form-input" rows="5" placeholder="Describa el equipo o servicio que necesita..."></textarea>
                 </div>
-                <div class="form-group">
-                    <label>¿En qué podemos ayudarle?</label>
-                    <textarea class="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-accent" style="width:100%; border:none; cursor:pointer;">Enviar Solicitud</button>
+                <button type="submit" class="btn-main" style="width:100%; border:none; cursor:pointer;">Enviar a Ingeniería</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <h2 style="color: white; margin-bottom: 20px;">HIDROSEM <span>INGENIEROS</span></h2>
-        <p style="opacity: 0.7; font-weight: 300;">Lima, 2026. Ingeniería al Servicio de tu Empresa.</p>
-        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">
-            &copy; 2026 HIDROSEM Ingenieros S.A.C. Todos los derechos reservados.
+        <div class="footer-logo">HIDROSEM <span>INGENIEROS</span></div>
+        <p style="opacity: 0.8; max-width: 700px; margin: 0 auto;">Ingeniería al servicio de tu empresa. Consolidándonos como aliados estratégicos para la eficiencia industrial y el cuidado del agua[cite: 7, 15].</p>
+        <div class="copy">
+            &copy; 2026 HIDROSEM Ingenieros S.A.C. Todos los derechos reservados. Lima, Perú.
         </div>
     </footer>
 
