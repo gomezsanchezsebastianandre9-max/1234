@@ -40,8 +40,22 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
 
-        .logo { font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; }
-        .logo span { color: var(--accent); }
+       .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px; /* Este es el tamaño ideal para que no se vea gigante */
+    width: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+}
 
         nav ul { list-style: none; display: flex; gap: 25px; }
         nav a {
