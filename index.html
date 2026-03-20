@@ -156,16 +156,15 @@
             .about-brief, .contact { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 3rem; }
         }
-    /* ... Y PEGA ESTE BLOQUE NUEVO EN SU LUGAR (Sin el efecto grayscale) */
-.logo-slide img {
-    width: 100%;
-    transition: transform 0.3s ease; /* Mantenemos una transición suave */
-    cursor: pointer;
+   /* === ANIMACIÓN PARA EL CARRUSEL DE LOGOS (Font Awesome Solids style) === */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-240px * 10)); } /* Esto mueve la pista la mitad de su ancho total */
 }
 
-/* Efecto opcional: Que el logo se agrande un poquito al pasar el mouse */
-.logo-slide img:hover {
-    transform: scale(1.05); /* Esto le da un toque interactivo */
+/* Tip pro: Pausar el carrusel cuando pasas el mouse por encima */
+.logo-carousel:hover .logo-track {
+    animation-play-state: paused;
 }
     </style>
 </head>
